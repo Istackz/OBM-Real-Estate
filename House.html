@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<!-- <body style="background-color:#e9edf6"> -->
+
+
+
+<style>
+.mySlides {display:none;}
+</style>
+<body>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Webpage Title</title>
+  <style>
+
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      background-color: #87CEEB; /* Light Blue Color */
+      text-align: center;
+      padding: 10px;
+    }
+
+    .header h1 {
+      margin: 0;
+      color: #ffffff; /* White Text Color */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Ocean Bay Management</h1>
+  </div>
+
+  <!-- Rest of your webpage content goes here -->
+
+</body>
+<div class="w3-container">
+  <h2>Slideshow Caption</h2>
+  <!-- <p>Add a caption text for each image slide with the w3-display-* classes (topleft, topmiddle, topright, bottomleft, bottommiddle, bottomright or middle).</p>  -->
+</div>
+
+<div class="w3-content w3-display-container">
+
+<div class="w3-display-container mySlides">
+  <img src="images/fulls/frontHouse.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Front House
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/fulls/Testkk.JPG" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    kitchen
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/fulls/IMG_1700.JPEG" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    kitchen
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/fulls/IMG_1701.JPEG" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Dining Room
+  </div>
+</div>
+
+<div class="w3-display-container mySlides">
+  <img src="images/fulls/frontHouse.jpg" style="width:100%">
+  <div class="w3-display-bottomleft w3-large w3-container w3-padding-16 w3-black">
+    Front
+  </div>
+</div>
+
+<button class="w3-button w3-display-left w3-black" onclick="plusDivs(-1)">&#10094;</button>
+<button class="w3-button w3-display-right w3-black" onclick="plusDivs(1)">&#10095;</button>
+
+</div>
+<style>
+  .list1, .list2  {
+      border: 5px solid grey; /* You can customize the border style and color */
+      padding: 10px; /* Optional: Add padding for better appearance */
+      display: inline-block; /* Make the element inline-block to fit content width */
+      margin-right: 10px 10px;
+  }
+  @media (max-width: 600px) {
+            /* Adjust the spacing for smaller screens like iPhones */
+            .list1, .list2 {
+                margin: 10px 10px; /* Increase margin for smaller screens */
+            }
+        }
+  
+</style>
+
+<div class="house-details">
+  
+
+    <ul>
+         
+        <li class="list1">Location: Hahira, GA </li>
+        <li class="list2">Square Footage: 1,394 sqft</li>
+        <li class="list2">Bedrooms: 3</li>
+        <li class="list2">Bathrooms: 2</li>
+        <li class="list2">Garage: Attached, 2-car</li>
+        <li class="list2">Year Built: 2012</li>
+        <li class="list2">Features: Spacious backyard, Modern kitchen, Walk-in closets</li>
+     
+
+  <p style="line-height: 1.6; color: #555;">
+    This exquisite house is now available for Lease, featuring three spacious bedrooms and two luxurious bathrooms that offer both comfort and ample living space for you and your family. The stylish marble kitchen adds a touch of elegance to your culinary experience, creating a perfect blend of functionality and aesthetics. Additionally, the property boasts a convenient two-car garage, ensuring secure accommodation for your vehicles.
+  </p>
+
+  <p style="line-height: 1.6; color: #555;">
+    Step outside into the expansive backyard, perfect for hosting gatherings, entertaining guests, or simply enjoying some outdoor relaxation. As an added bonus, a community park is just 50 feet away, providing a picturesque setting for recreational activities and quality time with loved ones. Nestled near Moody Air Force Base, this home not only offers a peaceful suburban retreat but also ensures proximity to essential amenities and a strong sense of community. Don't miss the opportunity to make this house your home sweet home.
+  </p>
+
+    </ul>
+    <div style="text-align: center;">
+
+      <!-- Contact Info Button -->
+      <a href="index.html#bottom" class="contact-button" style="display: inline-block; padding: 10px 20px; background-color: #3498db; color: #ffffff; text-decoration: none; border-radius: 5px;">Contact Info</a>
+    
+      <!-- More Homes Button -->
+      <a href="index.html"  class="MoreHomes-button"  style="display: inline-block; padding: 10px 20px;
+       background-color: #3498db; color: #ffffff; text-decoration: none; border-radius: 5px; margin: 15px 15px;">More Homes</a>
+
+       
+         
+    </div>
+
+</div>
+
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script>
+
+</body>
+</html>
